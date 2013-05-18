@@ -1,0 +1,260 @@
+@import "base";
+
+/* ----------------------------------------- catalog styles --------------------------------------- */
+.under_header_center {
+	text-align: center;
+	margin-bottom: 50px;
+	padding-top: 50px;
+	font-size: 14px;
+	.catalog-header-title {
+		font-size: 34px;
+	}
+	.catalog-header-text {
+		font-size: 16px;
+	}
+}
+
+.catalog-wrap {
+	overflow: hidden;
+}
+.catalog {
+	margin: 0 -50px 0 0;
+	padding: 0;
+	list-style: none;
+}
+.catalog__item {
+	position: relative;
+	display: inline-block;
+	margin: 0 33px 41px 0;
+	vertical-align: top;
+	width: 476px;
+	overflow: hidden;
+	&:hover {
+		@include switch_on_gpu;
+		.catalog__link {
+			@include opacity(1);
+			@include transition(all 300ms linear);
+		}
+	}
+	img {
+		display: block;
+	}
+}
+.catalog__link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-size: 14px;
+	@include hel_l;
+	color: #000;
+	text-decoration: none;
+	background: rgba(255,255,255,.5);
+	text-align: center;
+	@include opacity(0);
+	&:hover {
+		text-decoration: none;
+	}
+	strong {
+		display: block;
+		margin: 100px 0 3px;
+		font-size: 60px;
+	}
+	span {
+		text-transform: uppercase;
+	}
+}
+/* ------------------------------------ //END catalog styles --------------------------------------- */
+   
+/* ----------------------------------------- catalog styles --------------------------------------- */
+.website {
+	width: 873px;
+	margin: 0 auto;
+}
+.website__header {
+	text-align: center;
+	margin-top: 18px;
+}
+.website__title {
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+.slider {
+	position: relative;
+}
+.slider__prev,
+.slider__next {
+	position: absolute;
+	top: 50%;
+	margin-top: -18px;
+	background: none;
+	border: 0;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	@include border-radius(50%);
+	&:hover {
+		background: #e8e8e8;
+	}
+	i {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.slider__prev {
+	left: -72px;
+	i {
+		@include sized-sprite($icons, slider-prev);
+	}
+}
+.slider__next {
+	right: -72px;
+	i {
+		@include sized-sprite($icons, slider-next);
+	}
+}
+.slider__main {
+	min-height: 600px;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+	overflow: hidden;
+}
+.slider__item {
+	width: 100%;
+	position: absolute;
+	font-size: 14px;
+	@include ver;
+	overflow: hidden;
+}
+
+.website__buy {
+	text-align: center;
+}
+.website__buy-link {
+	margin-top: 12px;
+	@include ver;
+	a {
+		font-size: 12px;
+		color: #a0a0a0;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.website__descr {
+	font-size: 14px;
+	@include ver;
+	color: #848484;
+	a {
+		color: #848484;
+		font-size: 14px;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	ol {
+		padding: 0;
+	    @include column-count(2);
+	    counter-reset: list1;
+	}
+	li { 
+		list-style-type: none; 
+		&:before {
+			counter-increment: list1;
+    		content: counter(list1) ". ";
+		}
+	}
+
+}
+
+.website-example {
+	overflow: hidden;
+	margin: 45px 0 93px;
+}
+.website-example__title {
+	margin-bottom: 34px;
+}
+.website-example__list {
+	margin-right: -50px;
+	margin: auto;
+	padding: 0;
+}
+.website-example__item {
+	display: inline-block;
+	margin: 0 12px 43px 0;
+	vertical-align: top;
+	a {
+		text-decoration: none;
+		color: #848484;
+		font-size: 11px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	img {
+		display: block;
+		border: 1px solid #e0e0e0;
+	}
+	strong {
+		display: block;
+		margin-top: 12px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+}
+/* ----------------------------------- //END catalog styles --------------------------------------- */
+
+/* ------------------------------------- Independent blocks -------------------------------------- */
+.btn-simple {
+	display: inline-block;
+	padding: 5px 47px;
+	font-size: 14px;
+	@include hel_l;
+	color: #424141;
+	@include box-sizing(border-box);
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 2px solid #616161;
+	@include transition(all 400ms linear);
+	&:hover {
+		text-decoration: none;
+		border-color: #333;
+		color: #333;
+	}
+}
+.btn-close {
+	display: inline-block;
+	background: none;
+	border: 0;
+	@include sized-sprite($icons, close);
+	&:hover {
+		@include sized-sprite($icons, close-h);
+	}
+}
+.btn-more {
+	display: block;
+	margin: 0 auto;
+	background: none;
+	border: 0;
+	@include sized-sprite($icons, plus);
+	&:hover {
+		@include sized-sprite($icons, plus-h);
+	}
+}
+.btn-tooltip {
+	position: absolute;
+	display: none;
+	font-size: 12px;
+	@include hel_l;
+	color: #3c3c3c;
+}
+.icon {
+	display: inline-block;
+}
+
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
