@@ -7,10 +7,18 @@
 	padding-top: 50px;
 	font-size: 14px;
 	.catalog-header-title {
+		text-transform: uppercase;
 		font-size: 34px;
+		span{
+			color: #979595;
+		}
 	}
 	.catalog-header-text {
 		font-size: 16px;
+	}
+	.shop-go-header-text{
+		width: 700px;
+		margin: 13px auto 0px;
 	}
 }
 
@@ -258,3 +266,125 @@
 }
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
+/* ---------------------------------- //BEGIN shop-go page ----------------------------------- */
+.wrap_grey{
+	background: #f7f7f7;
+	margin-bottom: 50px;
+}
+.slider_shop-go{
+	.slider__prev{
+		left: 0px;
+		z-index: 5;
+	}
+	.slider__next{
+		right: 0px;
+		z-index: 5;
+	}
+}
+.slider__main_shop-go{
+	min-height: 446px;
+	width: 745px;
+}
+.slider__main_portfolio{
+	min-height: 441px;
+	width: 639px; 
+}
+.request{
+	margin-top: 44px;
+	text-align: center;
+	input{
+		width: 308px;
+		height: 30px;
+		margin: 23px 0;
+		padding: 0 5px;
+		outline: none;
+		text-align: center;
+		color: #000;
+		border: 2px solid #494949;
+	}
+	a{
+		display: block;
+		text-transform: uppercase;
+		font-size: 15px;
+		color: #b5b1b1;
+		&:hover{
+			text-decoration: none;
+			color: #818888;
+		}
+	}
+}
+.shop-details {
+	text-align: center;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	h4{
+		margin-bottom: 25px;
+		@include hel_l;
+		text-transform: uppercase;
+		font-size: 17px;
+		color: #383737; 
+	}
+}
+.shop-details__wrap {
+	width: 637px;
+	margin: 0 auto;
+}
+.shop-details__title{
+	margin: 45px 0;
+	font-size: 34px;
+	text-transform: uppercase;
+}
+.shop-details__number{
+	width: 26px;
+	height: 26px;
+	margin: 0 auto 27px;
+	border: 2px solid #494949;
+	@include border-radius(14px);
+	font: 14px Verdana, sans-serif;
+	line-height: 26px;
+	color: #494949;
+}
+.shop-details__text{
+	margin-bottom: 37px;
+	line-height: 16px;
+	font-size: 13px;
+	text-align: justify;
+	color: #9c9c9c;
+}
+.shop-details__preview{
+	overflow: hidden;
+	width: 595px;
+	margin: 10px auto 80px;
+	a{
+		float: left;
+		width: 186px;
+		height: 123px;
+		border: 1px solid #d0d0d0;
+		&:hover{
+			border: 1px solid #9d9898;
+		}
+		&:nth-child(2n){
+			margin: 0 15px;
+		}
+	}
+}
+.shop-details__points{
+	margin: 10px 0 30px;
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+}
+.shop-details__list{
+	padding: 0 0 30px;
+	list-style-type: none;
+	text-align: center;
+	font: 13px Verdana, sans-serif;
+	color: #9c9c9c;
+	li:last-child{
+		margin-top: 50px;
+		font-style: italic;
+		font-weight: bolder;
+		letter-spacing: 2px;
+		color: #000;
+	}
+}
