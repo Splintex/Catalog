@@ -18,10 +18,10 @@
 	<!-- All JavaScript at the bottom, except this Modernizr build.
 	   Modernizr enables HTML5 elements & feature detects for optimal performance.
 	   Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script type="text/javascript" async="" src="addhandl/delve.js"></script><script type="text/javascript" src=".addh/jquery-1.7.1.min.js"></script>
-    <script src="../js/modernizr-2.5.3.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.scrollTo-min.js"></script>
-    <script src="../js/header.js"></script>
+    <script type="text/javascript" async="" src="js/delve.js"></script><script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/modernizr-2.5.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+    <script src="js/header.js"></script>
     <script type="text/javascript">
         var _dp_options = {cid:1, event:2};
         var _dp = document.createElement('script');
@@ -83,13 +83,14 @@
             <!--/ CATALOG HEADER -->
             <div class="website">   
                 <div class="slider slider_shop-go">
-                    <button class="slider__prev"><i></i></button>
-                    <button class="slider__next"><i></i></button>
-                    <ul class="slider__main slider__main_shop-go">
-                        <li class="slider__item">
-                            <img src="img/slider-shop-go.png" alt="">
-                        </li>
-                    </ul>
+                    <div class="center">
+                        <button class="slider__prev" id="slider__prev1"><i></i></button>
+                        <button class="slider__next" id="slider__next1"><i></i></button>
+                    </div>
+                    <div class="slider__main slider__main_shop-go cycle-slideshow" data-cycle-fx="fadeout" data-cycle-timeout="0" data-cycle-speed="1000" data-cycle-prev="#slider__prev1" data-cycle-next="#slider__next1">
+                        <img src="img/slide1.png" alt="">
+                        <img src="img/slide1-1.png" alt="">
+                    </div>
                 </div>
                 <div class="request">
                     <p>
@@ -126,24 +127,20 @@
                         Помимо уже привычных настроек по цветам для всех элементов вашего магазина, мы создали еще 3 вида отображения превью магазина или 4 типа страницы с подробым описанием конкретного продукта. Выглядеть это будет ориентировочно так:
                     </p>
                     <div class="slider">
-                        <button class="slider__prev"><i></i></button>
-                        <button class="slider__next"><i></i></button>
-                        <ul class="slider__main slider__main_portfolio">
-                            <li class="slider__item">
-                                <img src="img/portfolio.png" alt="">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-details__preview">
-                        <a href="#">
-                            <img src="img/preview.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="img/preview.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="img/preview.png" alt="">
-                        </a>
+                        <div class="center">
+                            <button class="slider__prev" id="slider__prev2"><i></i></button>
+                            <button class="slider__next" id="slider__next2"><i></i></button>
+                        </div>
+                        <div class="slider__main slider__main_portfolio cycle-slideshow" data-cycle-fx="fadeout" data-cycle-timeout="0" data-cycle-speed="1000" data-cycle-prev="#slider__prev2" data-cycle-next="#slider__next2" data-cycle-pager="#no-template-pager" data-cycle-pager-template="">
+                            <img src="img/portfolio.png" alt="">
+                            <img src="img/portfolio-1.png" alt="">
+                            <img src="img/portfolio.png" alt="">
+                        </div>
+                        <div id="no-template-pager" class="shop-details__preview cycle-pager external">
+                            <img src="http://lorempixel.com/185/121" alt="">
+                            <img src="http://lorempixel.com/185/121" alt="">
+                            <img src="http://lorempixel.com/185/121" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="shop-details__item">
@@ -223,10 +220,10 @@
             </div>
         </div>
     </footer><!--/ FOOTER -->	<!-- JavaScript at the bottom for fast page loading -->
-	<script src="../js/jquery-1.7.1.min.js"></script>
-	<script src="../js/plugins.js"></script>
-	<script src="../js/jquery.cycle2.min.js"></script>
-	<script src="../js/jquery.cycle2.center.js"></script>
-	<script src="../js/script.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.center.js"></script>
+	<script src="js/script.js"></script>
 	<!-- end scripts -->
 </body></html>

@@ -136,6 +136,13 @@
 	@include ver;
 	overflow: hidden;
 }
+.slider__item_shop-go {
+	position: absolute;
+	width: 551px;
+	height: 322px;
+	margin: 53px 0 0 97px;
+	overflow: hidden;
+}
 
 .website__buy {
 	text-align: center;
@@ -272,6 +279,7 @@
 	margin-bottom: 50px;
 }
 .slider_shop-go{
+	background: url(../img/slider-shop-go.png) 64px 0 no-repeat;
 	.slider__prev{
 		left: 0px;
 		z-index: 5;
@@ -283,7 +291,11 @@
 }
 .slider__main_shop-go{
 	min-height: 446px;
-	width: 745px;
+	width: 553px;
+	
+	img{
+		margin: 53px 0 0 0px;
+	}
 }
 .slider__main_portfolio{
 	min-height: 441px;
@@ -355,17 +367,8 @@
 	overflow: hidden;
 	width: 595px;
 	margin: 10px auto 80px;
-	a{
-		float: left;
-		width: 186px;
-		height: 123px;
-		border: 1px solid #d0d0d0;
-		&:hover{
-			border: 1px solid #9d9898;
-		}
-		&:nth-child(2n){
-			margin: 0 15px;
-		}
+	img:nth-child(2n){
+		margin: 0 17px;
 	}
 }
 .shop-details__points{
