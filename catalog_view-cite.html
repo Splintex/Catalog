@@ -18,10 +18,10 @@
 	<!-- All JavaScript at the bottom, except this Modernizr build.
 	   Modernizr enables HTML5 elements & feature detects for optimal performance.
 	   Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script type="text/javascript" async="" src="addhandl/delve.js"></script><script type="text/javascript" src=".addh/jquery-1.7.1.min.js"></script>
-    <script src="../js/modernizr-2.5.3.min.js"></script>
+    <script type="text/javascript" async="" src="js/delve.js"></script><script type="text/javascript" src=".addh/jquery-1.7.1.min.js"></script>
+    <script src="js/modernizr-2.5.3.min.js"></script>
     <script type="text/javascript" src="../js/jquery.scrollTo-min.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="js/header.js"></script>
     <script type="text/javascript">
         var _dp_options = {cid:1, event:2};
         var _dp = document.createElement('script');
@@ -84,99 +84,113 @@
                 </p>
                 <a href="#" class="btn-simple">СОЗДАТЬ СВОЙ САЙТ</a>
             </div>
+        </div>    
             <!--/ CATALOG HEADER -->
-            <div class="website">   
-                <div class="website__header">
-                    <button class="btn-close">
-                        <span class="btn-tooltip">закрыть описание </span>
-                    </button>
-                    <h1 class="website__title">DIANA</h1>
-                </div>
-                <div class="slider">
-                    <button class="slider__prev"><i></i></button>
-                    <button class="slider__next"><i></i></button>
-                    <ul class="slider__main">
-                        <li class="slider__item">
-                            <img src="http://lorempixel.com/887/556/fashion/" alt="">
-                            <p>Описание к каждой фотографии</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="website__buy">
-                    <a href="#" class="btn-simple">КУПИТЬ САЙТ</a>
-                    <div class="website__buy-link">
-                        <a href="#">посмотреть демо-версию</a>
+            <div class="wrap-website">
+                <div class="website">   
+                    <div class="website__header">
+                        <button class="btn-close">
+                            <span class="btn-tooltip">закрыть описание </span>
+                        </button>
+                        <h1 class="website__title">DIANA</h1>
+                    </div>
+                    <div class="slider">
+                        <div class="center">
+                            <button class="slider__prev" id="slider__prev3"><i></i></button>
+                            <button class="slider__next" id="slider__next3"><i></i></button>
+                        </div>
+                        <div class="slider__main cycle-slideshow" data-cycle-fx="fadeout" data-cycle-timeout="0" data-cycle-speed="1000" data-cycle-prev="#slider__prev3" data-cycle-next="#slider__next3" data-cycle-slides="> div">
+                            <div class="slider__item">
+                                <img src="http://lorempixel.com/887/556/fashion/" alt="">
+                                <p>Описание к каждой фотографии</p>
+                            </div>
+                            <div class="slider__item">
+                                <img src="http://placesheen.com/887/556" alt="">
+                                <p>Описание к каждой фотографии2</p>
+                            </div>
+                            <div class="slider__item">
+                                <img src="http://lorempixel.com/887/556/fashion/" alt="">
+                                <p>Описание к каждой фотографии3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="website__buy">
+                        <a href="#" class="btn-simple">КУПИТЬ САЙТ</a>
+                        <div class="website__buy-link">
+                            <a href="#">посмотреть демо-версию</a>
+                        </div>
+                    </div>
+                    <div class="website__descr">
+                        <h2 class="website__descr-title">Характеристики сайта:</h2>
+                        <ol>
+                            <li>Три готовые дизайн-темы в одном сайте</li>
+                            <li>Возможность регулировать высоту сайта</li>
+                            <li>Удобные горизонтальные галереи с множеством настроек</li>
+                            <li>Три шаблона страниц с превью галерей на выбор</li>
+                            <li>Пять вариантов расположения логотипа и меню</li>
+                            <li>Варианты текстовых страниц, контактов, календаря</li>
+                            <li>Возможность управлять цветами всех элементов сайта,  закачка логотипа</li>
+                            <li>Новости - несколько видов страниц, добавление 
+                        галерей фотографий к новостям</li>
+                            <li>Варианты расположения копирайта (управление 
+                        иконками/ ссылками на социальные страницы)</li>
+                            <li>Закрытые галереи для клиентов</li>
+                            <li>iPad-версия сайта</li>
+                            <li>Мобильная версия сайта</li>
+                        </ol>
+                        <p>Подробное описание каждой из перечисленных выше возможностей сайта Diana с илюстрациями и примерами вы можете найти <a href="#">здесь</a>.</p>
+                    </div>
+                    <div class="website-example">
+                        <h2 class="website-example__title">Примеры сайтов, созданных на основе “Diana”:</h2>
+                        <ul class="website-example__list">
+                            <li class="website-example__item">
+                                <a href="#">
+                                    <img src="http://lorempixel.com/275/175/fashion/" alt="">
+                                    <strong>Елизавета Быданцева / фотограф</strong>
+                                    lizamakeup.ru
+                                </a>
+                            </li>
+                            <li class="website-example__item">
+                                <a href="#">
+                                    <img src="http://lorempixel.com/275/175/fashion/" alt="">
+                                    <strong>Елизавета Быданцева / фотограф</strong>
+                                    lizamakeup.ru
+                                </a>
+                            </li>
+                            <li class="website-example__item">
+                                <a href="#">
+                                    <img src="http://lorempixel.com/275/175/fashion/" alt="">
+                                    <strong>Елизавета Быданцева / фотограф</strong>
+                                    lizamakeup.ru
+                                </a>
+                            </li>
+                            <li class="website-example__item">
+                                <a href="#">
+                                    <img src="http://lorempixel.com/275/175/fashion/" alt="">
+                                    <strong>Елизавета Быданцева / фотограф</strong>
+                                    lizamakeup.ru
+                                </a>
+                            </li>
+                            <li class="website-example__item">
+                                <a href="#">
+                                    <img src="http://lorempixel.com/275/175/fashion/" alt="">
+                                    <strong>Елизавета Быданцева / фотограф</strong>
+                                    lizamakeup.ru
+                                </a>
+                            </li>
+                            <li class="website-example__item">
+                                <a href="#">
+                                    <img src="http://lorempixel.com/275/175/fashion/" alt="">
+                                    <strong>Елизавета Быданцева / фотограф</strong>
+                                    lizamakeup.ru
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="btn-more"><span class="btn-tooltip">показать еще примеры</span></button>
                     </div>
                 </div>
-                <div class="website__descr">
-                    <h2 class="website__descr-title">Характеристики сайта:</h2>
-                    <ol>
-                        <li>Три готовые дизайн-темы в одном сайте</li>
-                        <li>Возможность регулировать высоту сайта</li>
-                        <li>Удобные горизонтальные галереи с множеством настроек</li>
-                        <li>Три шаблона страниц с превью галерей на выбор</li>
-                        <li>Пять вариантов расположения логотипа и меню</li>
-                        <li>Варианты текстовых страниц, контактов, календаря</li>
-                        <li>Возможность управлять цветами всех элементов сайта,  закачка логотипа</li>
-                        <li>Новости - несколько видов страниц, добавление 
-                        галерей фотографий к новостям</li>
-                        <li>Варианты расположения копирайта (управление 
-                        иконками/ ссылками на социальные страницы)</li>
-                        <li>Закрытые галереи для клиентов</li>
-                        <li>iPad-версия сайта</li>
-                        <li>Мобильная версия сайта</li>
-                    </ol>
-                    <p>Подробное описание каждой из перечисленных выше возможностей сайта Diana с илюстрациями и примерами вы можете найти <a href="#">здесь</a>.</p>
-                </div>
-                <div class="website-example">
-                    <h2 class="website-example__title">Примеры сайтов, созданных на основе “Diana”:</h2>
-                    <ul class="website-example__list">
-                        <li class="website-example__item">
-                            <a href="#">
-                                <img src="http://lorempixel.com/275/175/fashion/" alt="">
-                                <strong>Елизавета Быданцева / фотограф</strong>
-                                lizamakeup.ru
-                            </a>
-                        </li>
-                        <li class="website-example__item">
-                            <a href="#">
-                                <img src="http://lorempixel.com/275/175/fashion/" alt="">
-                                <strong>Елизавета Быданцева / фотограф</strong>
-                                lizamakeup.ru
-                            </a>
-                        </li>
-                        <li class="website-example__item">
-                            <a href="#">
-                                <img src="http://lorempixel.com/275/175/fashion/" alt="">
-                                <strong>Елизавета Быданцева / фотограф</strong>
-                                lizamakeup.ru
-                            </a>
-                        </li>
-                        <li class="website-example__item">
-                            <a href="#">
-                                <img src="http://lorempixel.com/275/175/fashion/" alt="">
-                                <strong>Елизавета Быданцева / фотограф</strong>
-                                lizamakeup.ru
-                            </a>
-                        </li>
-                        <li class="website-example__item">
-                            <a href="#">
-                                <img src="http://lorempixel.com/275/175/fashion/" alt="">
-                                <strong>Елизавета Быданцева / фотограф</strong>
-                                lizamakeup.ru
-                            </a>
-                        </li>
-                        <li class="website-example__item">
-                            <a href="#">
-                                <img src="http://lorempixel.com/275/175/fashion/" alt="">
-                                <strong>Елизавета Быданцева / фотограф</strong>
-                                lizamakeup.ru
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="btn-more"><span class="btn-tooltip">показать еще примеры</span></button>
-                </div>
             </div>
+            
             <div class="catalog-wrap">
                 <ul class="catalog">
                     <li class="catalog__item">
@@ -208,8 +222,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>	
+            </div>	
     </div>				
     </div>
     <!--/ CONTENT -->
@@ -235,10 +248,10 @@
                 <div class="foot-col b-counter">
                     <h4>СОЗДАНО САЙТОВ</h4>
                     <div class="counter">
-                                                <div class="number">2</div>
-                                                <div class="number">1</div>
-                                                <div class="number">8</div>
-                                                <div class="number">8</div>
+                        <div class="number">2</div>
+                        <div class="number">1</div>
+                        <div class="number">8</div>
+                        <div class="number">8</div>
                         					</div>
                 </div>
                 <div class="foot-col b-paymant">
@@ -258,10 +271,10 @@
             </div>
         </div>
     </footer><!--/ FOOTER -->	<!-- JavaScript at the bottom for fast page loading -->
-	<script src="../js/jquery-1.7.1.min.js"></script>
-	<script src="../js/plugins.js"></script>
-	<script src="../js/jquery.cycle2.min.js"></script>
-	<script src="../js/jquery.cycle2.center.js"></script>
-	<script src="../js/script.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.center.js"></script>
+	<script src="js/script.js"></script>
 	<!-- end scripts -->
 </body></html>
