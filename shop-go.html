@@ -125,18 +125,11 @@
                     <h4>УПРАВЛЕНИЕ ДИЗАЙНОМ.</h4>
                     <p class="shop-details__text">
                         Помимо уже привычных настроек по цветам для всех элементов вашего магазина, мы создали еще 3 вида отображения превью магазина или 4 типа страницы с подробым описанием конкретного продукта. Выглядеть это будет ориентировочно так:
-                    </p>
-<style>
-#cycle-2 .cycle-slide { border:3px solid #fff; }
-#cycle-2 .cycle-slide-active { border:3px solid #004; }
-</style>                    
-                    <div class="slider">
-                        
+                    </p>                  
+                    <div class="slider slider_carousel">
                         <div id="slideshow-1">
-                            <div class="center">
-                                <button class="slider__prev" id="slider__prev2"><i></i></button>
-                                <button class="slider__next" id="slider__next2"><i></i></button>
-                            </div>
+                            <button class="slider__prev" id="slider__prev2"><i></i></button>
+                            <button class="slider__next" id="slider__next2"><i></i></button>
                             <div id="cycle-1" class="slider__main slider__main_portfolio cycle-slideshow" 
                             data-cycle-fx="fadeout" 
                             data-cycle-timeout="0" 
@@ -153,45 +146,22 @@
                             </div>
                         </div>    
                         <div id="slideshow-2">
-                            <div class="center">
-                                <button class="slider__prev"><i></i></button>
-                                <button class="slider__next"><i></i></button>
-                            </div>
                             <div id="cycle-2" class="shop-details__preview cycle-slideshow"
-                            data-cycle-slides="> div"
                             data-cycle-fx="carousel"
                             data-cycle-carousel-visible="3"
                             data-cycle-carousel-fluid="true"
                             data-allow-wrap="false" 
                             data-cycle-timeout="0"
-                            data-cycle-prev="#slideshow-2 .slider__prev" 
-                            data-cycle-next="#slideshow-2 .slider__next"  
                             >
-                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
-                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
-                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
-                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
-                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
-                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                                <img src="img/portfolio.png" alt="" width="185" height="120">
+                                <img src="img/portfolio-1.png" alt="" width="185" height="120">
+                                <img src="img/portfolio.png" alt="" width="185" height="120">
+                                <img src="img/portfolio-1.png" alt="" width="185" height="120">
+                                <img src="img/portfolio.png" alt="" width="185" height="120">
+                                <img src="img/portfolio-1.png" alt="" width="185" height="120">
                             </div>
                         </div>    
                     </div>
-
-<script>
-jQuery(document).ready(function($){
-
-var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
-    // advance the other slideshow
-    slideshows.not(this).cycle('goto', opts.currSlide);
-});
-
-$('#cycle-2 .cycle-slide').click(function(){
-    slideshows.cycle('goto',opts.nextSlide);
-});
-
-});
-</script>
-                    
                 </div>
                 <div class="shop-details__item">
                 <div class="shop-details__number">3</div>
@@ -226,9 +196,11 @@ $('#cycle-2 .cycle-slide').click(function(){
     </div>
     <!--/ CONTENT -->
 </div>
-<script>var _page = 'catalog-index';</script>  
-	<!-- FOOTER -->
-	<footer class="main-footer">      
+<script>
+    var _page = 'catalog-index';
+</script>  
+<!-- FOOTER -->
+<footer class="main-footer">      
 		<div class="wrap b-share">
 			<a href="http://www.addthis.com/bookmark.php" target="_blank"><span class="pop-up"><span>расскажите о нас друзьям</span></span><img src="./img/soc_net1.png" alt=""></a>
 			<a href="http://www.facebook.com/gophotoweb" target="_blank"><span class="pop-up"><span>мы на facebook</span></span><img src="./img/soc_netF.png" alt=""></a>
@@ -247,11 +219,11 @@ $('#cycle-2 .cycle-slide').click(function(){
                 <div class="foot-col b-counter">
                     <h4>СОЗДАНО САЙТОВ</h4>
                     <div class="counter">
-                                                <div class="number">2</div>
-                                                <div class="number">1</div>
-                                                <div class="number">8</div>
-                                                <div class="number">8</div>
-                        					</div>
+                        <div class="number">2</div>
+                        <div class="number">1</div>
+                        <div class="number">8</div>
+                        <div class="number">8</div>
+					</div>
                 </div>
                 <div class="foot-col b-paymant">
                     <h4>СПОСОБЫ ОПЛАТЫ</h4>
@@ -269,12 +241,15 @@ $('#cycle-2 .cycle-slide').click(function(){
                 <div class="copyright">© 2011 — 2013 Gophotoweb — сайты-портфолио</div>
             </div>
         </div>
-    </footer><!--/ FOOTER -->	<!-- JavaScript at the bottom for fast page loading -->
-	<script src="js/jquery-1.7.1.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/jquery.cycle2.min.js"></script>
-	<script src="js/jquery.cycle2.center.js"></script>
-    <script src="js/jquery.cycle2.carusel.js"></script>
-	<script src="js/script.js"></script>
-	<!-- end scripts -->
-</body></html>
+</footer>
+<!--/ FOOTER -->	
+<!-- JavaScript at the bottom for fast page loading -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/jquery.cycle2.min.js"></script>
+<script src="js/jquery.cycle2.center.js"></script>
+<script src="js/jquery.cycle2.carusel.js"></script>
+<script src="js/script.js"></script>
+<!-- end scripts -->
+</body>
+</html>

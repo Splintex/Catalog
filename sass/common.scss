@@ -96,6 +96,13 @@
 .slider {
 	position: relative;
 }
+.slider_carousel {
+	.slider__prev,
+	.slider__next {
+		top: 200px;
+		margin-top: 0;
+	}
+}
 .slider__prev,
 .slider__next {
 	position: absolute;
@@ -381,8 +388,17 @@
 	overflow: hidden;
 	width: 595px;
 	margin: 10px auto 80px;
-	img:nth-child(2n){
-		margin: 0 17px;
+	img {
+		width: 185px !important;
+		height: 120px;
+		margin: 0 17px 0 0;
+		border: 1px solid #cdcdcd;
+		&:nth-child(2n) {
+			
+		}
+	}
+	.cycle-slide-active {
+		border-color: #a49f9f;
 	}
 }
 .shop-details__points{
