@@ -127,6 +127,15 @@
 		@include sized-sprite($icons, slider-next);
 	}
 }
+#slideshow-2{
+	position: relative;
+	.slider__prev{
+		top: 10px;
+	}
+	.slider__next{
+		top: 10px;
+	}
+}
 .slider__main {
 	min-height: 600px;
 	padding: 0;

@@ -126,28 +126,72 @@
                     <p class="shop-details__text">
                         Помимо уже привычных настроек по цветам для всех элементов вашего магазина, мы создали еще 3 вида отображения превью магазина или 4 типа страницы с подробым описанием конкретного продукта. Выглядеть это будет ориентировочно так:
                     </p>
+<style>
+#cycle-2 .cycle-slide { border:3px solid #fff; }
+#cycle-2 .cycle-slide-active { border:3px solid #004; }
+</style>                    
                     <div class="slider">
-                        <div class="center">
-                            <button class="slider__prev" id="slider__prev2"><i></i></button>
-                            <button class="slider__next" id="slider__next2"><i></i></button>
-                        </div>
-                        <div class="slider__main slider__main_portfolio cycle-slideshow" data-cycle-fx="fadeout" data-cycle-timeout="0" data-cycle-speed="1000" data-cycle-prev="#slider__prev2" data-cycle-next="#slider__next2" data-cycle-pager="#no-template-pager" data-cycle-pager-template="">
-                            <img src="img/portfolio.png" alt="">
-                            <img src="img/portfolio-1.png" alt="">
-                            <img src="img/portfolio.png" alt="">
-                            <img src="img/portfolio-1.png" alt="">
-                            <img src="img/portfolio.png" alt="">
-                            <img src="img/portfolio-1.png" alt="">
-                        </div>
-                        <div id="no-template-pager" class="shop-details__preview cycle-pager external">
-                            <img src="http://lorempixel.com/185/121" alt="">
-                            <img src="http://lorempixel.com/185/121" alt="">
-                            <img src="http://lorempixel.com/185/121" alt="">
-                            <img src="http://lorempixel.com/185/121" alt="">
-                            <img src="http://lorempixel.com/185/121" alt="">
-                            <img src="http://lorempixel.com/185/121" alt="">
-                        </div>
+                        
+                        <div id="slideshow-1">
+                            <div class="center">
+                                <button class="slider__prev" id="slider__prev2"><i></i></button>
+                                <button class="slider__next" id="slider__next2"><i></i></button>
+                            </div>
+                            <div id="cycle-1" class="slider__main slider__main_portfolio cycle-slideshow" 
+                            data-cycle-fx="fadeout" 
+                            data-cycle-timeout="0" 
+                            data-cycle-speed="1000" 
+                            data-cycle-prev="#slider__prev2" 
+                            data-cycle-next="#slider__next2" 
+                            >
+                                <img src="img/portfolio.png" alt="">
+                                <img src="img/portfolio-1.png" alt="">
+                                <img src="img/portfolio.png" alt="">
+                                <img src="img/portfolio-1.png" alt="">
+                                <img src="img/portfolio.png" alt="">
+                                <img src="img/portfolio-1.png" alt="">
+                            </div>
+                        </div>    
+                        <div id="slideshow-2">
+                            <div class="center">
+                                <button class="slider__prev"><i></i></button>
+                                <button class="slider__next"><i></i></button>
+                            </div>
+                            <div id="cycle-2" class="shop-details__preview cycle-slideshow"
+                            data-cycle-slides="> div"
+                            data-cycle-fx="carousel"
+                            data-cycle-carousel-visible="3"
+                            data-cycle-carousel-fluid="true"
+                            data-allow-wrap="false" 
+                            data-cycle-timeout="0"
+                            data-cycle-prev="#slideshow-2 .slider__prev" 
+                            data-cycle-next="#slideshow-2 .slider__next"  
+                            >
+                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                                <div><img src="http://lorempixel.com/185/121" alt=""></div>
+                            </div>
+                        </div>    
                     </div>
+
+<script>
+jQuery(document).ready(function($){
+
+var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+    // advance the other slideshow
+    slideshows.not(this).cycle('goto', opts.currSlide);
+});
+
+$('#cycle-2 .cycle-slide').click(function(){
+    slideshows.cycle('goto',opts.nextSlide);
+});
+
+});
+</script>
+                    
                 </div>
                 <div class="shop-details__item">
                 <div class="shop-details__number">3</div>
@@ -230,6 +274,7 @@
 	<script src="js/plugins.js"></script>
 	<script src="js/jquery.cycle2.min.js"></script>
 	<script src="js/jquery.cycle2.center.js"></script>
+    <script src="js/jquery.cycle2.carusel.js"></script>
 	<script src="js/script.js"></script>
 	<!-- end scripts -->
 </body></html>
